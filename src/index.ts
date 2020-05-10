@@ -20,16 +20,7 @@ function sketch(p: p5) {
       60,
       3
     );
-    const sccs: SineColorScaleCircleSpiral = new SineColorScaleCircleSpiral(
-      p,
-      700,
-      speed,
-      21,
-      55
-    );
-    sccs.setColorRange("red", { start: 255, end: 255 });
-    sccs.setColorRange("green", { start: 255, end: 127 });
-
+    const sccs = makeSineColorScaleCircleSpiral();
     spiral = sccs;
   };
 
@@ -47,7 +38,21 @@ function sketch(p: p5) {
 
   p.windowResized = () => {
     p.resizeCanvas(p.windowWidth, p.windowHeight);
+    spiral = makeSineColorScaleCircleSpiral();
   };
+
+  function makeSineColorScaleCircleSpiral(): SineColorScaleCircleSpiral {
+    const nElements =
+      (p.windowWidth >= p.windowHeight
+        ? p.windowWidth / 2
+        : p.windowHeight / 2) + 200;
+
+    const sccs = new SineColorScaleCircleSpiral(p, nElements, speed, 21, 55);
+    sccs.setColorRange("red", { start: 255, end: 255 });
+    sccs.setColorRange("green", { start: 255, end: 127 });
+
+    return sccs;
+  }
 }
 
 new p5(sketch);
