@@ -4,8 +4,6 @@ import CircleSpiral from "./CircleSpiral";
 import SineScalableCircleSpiral from "./SineScalableCircleSpiral";
 import SineColorScaleCircleSpiral from "./SineColorScaleCircleSpiral";
 
-// <style> body {padding: 0; margin: 0} </style> <!-- this line removes any default padding -->
-
 function sketch(p: p5) {
   let spiral: Spiral;
   const speed = 2.962;
@@ -47,7 +45,9 @@ function sketch(p: p5) {
     p.fullscreen(!fs);
   };
 
-  // TODO mobile fullscreen
+  p.windowResized = () => {
+    p.resizeCanvas(p.windowWidth, p.windowHeight);
+  };
 }
 
 new p5(sketch);
