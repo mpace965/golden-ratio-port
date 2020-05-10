@@ -1,6 +1,7 @@
 import p5 from "p5";
 import Spiral from "./Spiral";
 import CircleSpiral from "./CircleSpiral";
+import SineScalableCircleSpiral from "./SineScalableCircleSpiral";
 
 function sketch(p: p5) {
   let spiral: Spiral;
@@ -9,8 +10,16 @@ function sketch(p: p5) {
     p.frameRate(60);
 
     const circleSpiral: CircleSpiral = new CircleSpiral(p, 375, 2.962);
+    const ssc: SineScalableCircleSpiral = new SineScalableCircleSpiral(
+      p,
+      800,
+      2.962,
+      15,
+      60,
+      3
+    );
 
-    spiral = circleSpiral;
+    spiral = ssc;
   };
 
   p.draw = () => {
