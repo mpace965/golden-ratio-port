@@ -4,6 +4,8 @@ import CircleSpiral from "./CircleSpiral";
 import SineScalableCircleSpiral from "./SineScalableCircleSpiral";
 import SineColorScaleCircleSpiral from "./SineColorScaleCircleSpiral";
 
+// <style> body {padding: 0; margin: 0} </style> <!-- this line removes any default padding -->
+
 function sketch(p: p5) {
   let spiral: Spiral;
   const speed = 2.962;
@@ -22,7 +24,7 @@ function sketch(p: p5) {
     );
     const sccs: SineColorScaleCircleSpiral = new SineColorScaleCircleSpiral(
       p,
-      400,
+      700,
       speed,
       21,
       55
@@ -39,6 +41,13 @@ function sketch(p: p5) {
 
     spiral.draw();
   };
+
+  p.mousePressed = () => {
+    let fs = p.fullscreen();
+    p.fullscreen(!fs);
+  };
+
+  // TODO mobile fullscreen
 }
 
 new p5(sketch);

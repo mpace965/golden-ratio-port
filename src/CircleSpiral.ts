@@ -11,7 +11,11 @@ export default class CircleSpiral extends Spiral {
     p.fill(this.getFillColor());
     p.strokeWeight(this.getStrokeWeight());
     p.stroke(this.getStrokeColor());
-    p.circle(radius * p.cos(theta), radius * p.sin(theta), this.getSize());
+    p.circle(
+      radius * Math.cos(theta),
+      radius * Math.sin(theta),
+      this.getSize()
+    );
   }
 
   protected getFillColor(): string {

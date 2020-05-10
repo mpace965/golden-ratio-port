@@ -28,7 +28,7 @@ export default class SineScalableCircleSpiral extends CircleSpiral {
     const { p, radius, sineSpeed } = this;
     return (
       this.getAmplitude() *
-        p.cos(p.radians(radius + p.frameCount * sineSpeed)) +
+        Math.cos(p.radians(radius + p.frameCount * sineSpeed)) +
       this.getMidline()
     );
   }
