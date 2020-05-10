@@ -1,10 +1,11 @@
 {
   "name": "golden-ratio-port",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A port of my Processing golden ratio sketch to p5js",
   "author": "Matt Pace",
   "license": "MIT",
   "main": "dist/bundle.js",
+  "repository": "github:mpace965/golden-ratio-port",
   "scripts": {
     "watch": "webpack-dev-server --mode=development",
     "build": "webpack --mode=production"
