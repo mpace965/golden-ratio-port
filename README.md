@@ -1,5 +1,7 @@
-# Typescript p5.js Starter
+# Golden Ratio Port
 
-Work on p5.js sketches locally with Webpack Dev Server and hot reloading.
+Bootstrapped with [typescript-p5js-starter](https://github.com/mpace965/typescript-p5js-starter).
 
-Builds with external/global p5 pulled in via CDN or otherwise.
+This is a port of my [Spirals](https://github.com/mpace965/processing-sketchbook/tree/master/Spirals) Processing sketch to p5.js.
+
+The sketch is now responsive and looks good in fullscreen at any size.
