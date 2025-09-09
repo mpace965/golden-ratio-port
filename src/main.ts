@@ -9,7 +9,7 @@ function sketch(p: p5) {
   const speed = 2.962;
   p.setup = () => {
     p.createCanvas(p.windowWidth, p.windowHeight);
-    p.frameRate(60);
+    p.frameRate(120);
 
     const circleSpiral: CircleSpiral = new CircleSpiral(p, 375, speed);
     const ssc: SineScalableCircleSpiral = new SineScalableCircleSpiral(
